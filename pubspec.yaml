@@ -44,7 +44,6 @@ flutter:
   # Assets directory
   assets:
     - assets/audio/vlog.mp3
-    - assets/images/apple_logo.png
 
   # Font configuration (if needed)
   fonts:

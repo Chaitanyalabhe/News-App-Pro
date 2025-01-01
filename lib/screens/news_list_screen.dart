@@ -5,6 +5,7 @@ import '../bloc/news_state.dart';
 import '../widgets/news_card.dart';
 import 'news_detail_screen.dart';
 import 'user_form_screen.dart';
+import 'audio_player_screen.dart'; // Import the new screen
 
 class NewsListScreen extends StatelessWidget {
   const NewsListScreen({Key? key}) : super(key: key);
@@ -17,13 +18,21 @@ class NewsListScreen extends StatelessWidget {
         actions: [
           ElevatedButton(
             onPressed: () {
-              // Navigate to the UserFormScreen when the button is clicked
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const UserFormScreen()),
               );
             },
             child: const Text('Fill Form'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AudioPlayerScreen()),
+              );
+            },
+            child: const Text('Audio Player'),
           ),
         ],
       ),
@@ -39,7 +48,6 @@ class NewsListScreen extends StatelessWidget {
                 return NewsCard(
                   article: article,
                   onTap: () {
-                    // Navigate to NewsDetailScreen when tapping on an article
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -53,7 +61,7 @@ class NewsListScreen extends StatelessWidget {
           } else if (state is NewsErrorState) {
             return Center(child: Text(state.message));
           } else {
-            return const Center(child: Text('No data available.'));
+            return const Center(child: Text('No data'));
           }
         },
       ),
