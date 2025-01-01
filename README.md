@@ -1,17 +1,52 @@
-# news_app_pro
+# News App Pro 📰
 
-internshala
+A modern news aggregation app built with Flutter. The app fetches real-time news articles and displays them in a user-friendly interface. It includes a splash screen, a list of news articles, article details, and additional features like an audio player and user form. The app uses the [News API](https://newsapi.org/) for fetching news data.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📱 Features
+- **Splash Screen**: A captivating intro screen that loads the app.
+- **Home Screen**: Displays a list of news articles fetched from the API.
+- **News Detail Screen**: Provides detailed information about a selected news article.
+- **User Form Screen**: Allows users to fill in their personal details.
+- **Audio Player**: Plays audio files directly within the app.
+- **Bottom Navigation**: Easily switch between the Home Screen and the Audio Player screen.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ Technologies Used
+- **Flutter**
+- **Dart**
+- **News API**
+- **Flutter BLoC**
+- **Share Plus Plugin**
+- **Hero Animations**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# News-App-Pro
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK installed.
+- Code editor (e.g., Visual Studio Code, Android Studio).
+- Device/emulator to run the app.
+
+---
+
+## 🖼️ Screenshots
+
+### Splash Screen
+<img src="./screenshots/splash_screen.png" width="250" />
+
+### Home Screen
+<img src="./screenshots/home_screen.png" width="250" />
+
+### News Detail Screen
+<img src="./screenshots/details_screen.png" width="250" />
+
+### User Form Screen
+<img src="./screenshots/form_screen.png" width="250" />
+
+### Audio Player Screen
+<img src="./screenshots/audioplayer_screen.png" width="250" />
+
