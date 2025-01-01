@@ -5,7 +5,7 @@ import '../bloc/news_state.dart';
 import '../widgets/news_card.dart';
 import 'news_detail_screen.dart';
 import 'user_form_screen.dart';
-import 'audio_player_screen.dart'; // Import the new screen
+import 'audio_player_screen.dart';
 
 class NewsListScreen extends StatelessWidget {
   const NewsListScreen({Key? key}) : super(key: key);
@@ -14,8 +14,13 @@ class NewsListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('News App Pro'),
+        title: const Text(
+          'News App Pro',
+          overflow: TextOverflow.ellipsis,
+          maxLines: 1,
+        ),
         actions: [
+
           ElevatedButton(
             onPressed: () {
               Navigator.push(
@@ -23,6 +28,10 @@ class NewsListScreen extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const UserFormScreen()),
               );
             },
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+              textStyle: const TextStyle(fontSize: 12),
+            ),
             child: const Text('Fill Form'),
           ),
           ElevatedButton(
@@ -32,6 +41,10 @@ class NewsListScreen extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const AudioPlayerScreen()),
               );
             },
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+              textStyle: const TextStyle(fontSize: 12),
+            ),
             child: const Text('Audio Player'),
           ),
         ],

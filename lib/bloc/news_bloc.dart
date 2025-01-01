@@ -7,14 +7,14 @@ import 'dart:convert';
 
 class NewsBloc extends Bloc<NewsEvent, NewsState> {
   NewsBloc() : super(NewsInitialState()) {
-    // Register the event handler for FetchNewsEvent
+
     on<FetchNewsEvent>((event, emit) async {
-      emit(NewsLoadingState()); // Emit loading state
+      emit(NewsLoadingState());
       try {
         final articles = await _fetchNews();
-        emit(NewsLoadedState(articles)); // Emit loaded state with articles
+        emit(NewsLoadedState(articles));
       } catch (e) {
-        emit(NewsErrorState(message: e.toString())); // Emit error state with the message
+        emit(NewsErrorState(message: e.toString()));
       }
     });
   }
