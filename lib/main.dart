@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'blocks/news_block.dart';
-import 'blocks/news_event.dart';
+import 'package:provider/provider.dart';
+import 'bloc/news_bloc.dart';
+import 'bloc/news_event.dart';
 import 'screens/news_list_screen.dart';
 
 void main() {
-  runApp(const NewsApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        BlocProvider<NewsBloc>(
+          create: (context) => NewsBloc()..add(FetchNewsEvent()),
+        ),
+      ],
+      child: const NewsApp(),
+    ),
+  );
 }
 
 class NewsApp extends StatelessWidget {
@@ -18,10 +28,7 @@ class NewsApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider(
-        create: (_) => NewsBloc()..add(FetchNewsEvent()),
-        child: const NewsListScreen(),
-      ),
+      home: const NewsListScreen(),
     );
   }
 }
