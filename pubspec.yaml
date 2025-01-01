@@ -1,0 +1,55 @@
+name: news_app_pro
+description: "Internshala - News App Pro"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Plugins
+  share_plus: ^10.1.3
+
+  # UI and icons
+  cupertino_icons: ^1.0.8
+
+  # State management
+  flutter_bloc: ^8.1.0
+
+  # Networking
+  http: ^0.13.6
+
+  # Utilities
+  equatable: ^2.0.5   # For state comparison
+  formz: ^0.4.0       # Form validation
+  shared_preferences: ^2.0.17 # Local storage for settings
+
+  # Multimedia
+  audioplayers: ^0.20.1 # Audio player for assets
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Linting and code practices
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets directory
+  assets:
+    - assets/audio/vlog.mp3
+    - assets/images/apple_logo.png
+
+  # Font configuration (if needed)
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
